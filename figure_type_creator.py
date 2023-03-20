@@ -170,7 +170,7 @@ class FigureTypeCreator():
                 'xtick.minor.width': 1,
                 'ytick.minor.width': 1,
 
-                'lines.linewidth': 2,
+                'lines.linewidth': 2.5,
                 # 'lines.markersize': 1.5,
                 # 'legend.handlelength': 2.5,
 
@@ -178,10 +178,10 @@ class FigureTypeCreator():
 
                 'grid.linewidth': 1,
 
-                'xtick.major.size': 10,
-                'xtick.minor.size': 6,
-                'ytick.major.size': 10,
-                'ytick.minor.size': 6,
+                'xtick.major.size': 8,
+                'xtick.minor.size': 4,
+                'ytick.major.size': 8,
+                'ytick.minor.size': 4,
             })
         else:
             raise NotImplementedError
