@@ -1,10 +1,11 @@
 from typing import Any, Dict, Literal, Union
-from cycler import cycler
+
 import seaborn as sns
+from cycler import cycler
 from pubplot import Document
 from pubplot.document_classes import usenix
-from util import in2pt
 
+from .util import in2pt
 
 # https://scottplot.net/cookbook/4.1/colors/#category-10
 # https://www.nature.com/articles/nmeth.1618.pdf

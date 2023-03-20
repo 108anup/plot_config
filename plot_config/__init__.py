@@ -1,4 +1,5 @@
 import matplotlib.ticker as tck
+
 from .figure_type_creator import FigureTypeCreator
 
 

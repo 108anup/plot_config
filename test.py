@@ -1,9 +1,10 @@
-import seaborn as sns
-from typing import Callable
-import numpy as np
-from figure_type_creator import FigureTypeCreator
-from pubplot.axes import PubAxes
 import pprint
+from typing import Callable
+
+import numpy as np
+from pubplot.axes import PubAxes
+
+from plot_config.figure_type_creator import FigureTypeCreator
 
 
 def try_except(function: Callable):
