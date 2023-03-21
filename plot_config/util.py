@@ -1,12 +1,12 @@
 def in2pt(inches):
-    return inches * 72.72
+    return inches * 72.27
 
 # ----------------------------------------------------------------------------
 # Deprecated (pubplot manages these now)
 
 
 def pt2in(pt):
-    return pt/72.72
+    return pt/72.27
 
 
 def get_fig_size(col=1, height_frac=1, full=False):

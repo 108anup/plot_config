@@ -67,7 +67,7 @@ class FigureTypeCreator():
         # https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html
         # The permutation is based on best visuals with wong colors
         # I don't include dotted as that is hard to see.
-        available_linestyles = ['dashed', 'solid', 'dashdot']
+        available_linestyles = ['solid', 'dashdot', 'dashed']
         self.linestyles = self.get_entries(
             available_linestyles, self.num_entries)
 
@@ -106,7 +106,14 @@ class FigureTypeCreator():
             # Conferences require this.
             'pdf.fonttype': 42,
             # https://matplotlib.org/stable/tutorials/intermediate/tight_layout_guide.html
-            'figure.autolayout': True,
+            # There are bugs/caveats in this parameter ^^
+            # 'figure.autolayout': True,
+
+            # Use for each figure:
+            # fig.set_layout_engine('tight', pad=0.3)  # newer api TODO verify.
+            # fig.set_tight_layout({'pad': 0.3})
+            # Use smallest padding that works? matplotlib recommands > 0.3.
+
             'axes.prop_cycle': self.get_cycler(),
         }
         style.update(self.get_custom_style())
@@ -201,8 +208,10 @@ class FigureTypeCreator():
         # For paper, pubplot automatically sets the appropriate font sizes.
 
         if(self.pub_type == 'presentation'):
-            big_size = 32
-            small_size = 28
+            # big_size = 32
+            # small_size = 28
+            big_size = 28
+            small_size = 24
             ret.update({
                 'font.size': big_size,
                 'axes.titlesize': big_size,
@@ -218,8 +227,11 @@ class FigureTypeCreator():
         if(self.pub_type == 'presentation'):
             # Used for setting figure sizes
             ppt_sizes = {
-                "columnwidth": in2pt(13.33),
-                "textwidth": in2pt(7.5)
+                # The main text box in default ppt layout
+                "columnwidth": in2pt(11.5),
+                "textwidth": in2pt(11.5)
+                # "columnwidth": in2pt(13.33),
+                # "textwidth": in2pt(7.5)
             }
             doc.__dict__.update(ppt_sizes)
 
