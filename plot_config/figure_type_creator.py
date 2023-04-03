@@ -101,7 +101,7 @@ class FigureTypeCreator():
             cycling += cycler('marker', self.markers)
         return cycling
 
-    def get_figure_type(self):
+    def get_figure_type(self, *args, **kwargs):
         style = {
             # Conferences require this.
             'pdf.fonttype': 42,
@@ -119,7 +119,7 @@ class FigureTypeCreator():
         style.update(self.get_custom_style())
         style.update(self.get_line_sizes())
         style.update(self.get_font_sizes())
-        doc = Document(self.document_class, style=style)
+        doc = Document(self.document_class, style=style, *args, **kwargs)
 
         self.presentation_config(doc)
         self.paper_small_font(doc)
