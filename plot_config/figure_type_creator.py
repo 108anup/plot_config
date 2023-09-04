@@ -161,7 +161,8 @@ class FigureTypeCreator():
                 'ytick.minor.width': 0.4,
 
                 'lines.linewidth': 1,  # 0.8
-                'lines.markersize': 1.5,
+                'lines.markersize': 3,
+                'lines.markeredgewidth': 0.5,
                 'legend.handlelength': 2.5,
 
                 'hatch.linewidth': 0.5,
@@ -243,7 +244,7 @@ class FigureTypeCreator():
                 'axes.titlesize': doc.footnotesize,
                 'axes.labelsize': doc.footnotesize,
                 'legend.title_fontsize': doc.footnotesize,
-                'legend.fontsize': doc.footnotesize,
-                'xtick.labelsize': doc.footnotesize,
-                'ytick.labelsize': doc.footnotesize
+                'legend.fontsize': doc.scriptsize,
+                'xtick.labelsize': doc.scriptsize,
+                'ytick.labelsize': doc.scriptsize
             })
